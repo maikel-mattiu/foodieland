@@ -1,22 +1,25 @@
 import { Footer } from "@/components/Footer/Footer"
 import GlobalStyles from "./GlobalStyles"
 import Header from "@/components/Header/Header"
-import { ROUTES as routes } from "@/data";
+import { ROUTES as routes } from "@/data"
+import StyledComponentsRegistry from "./lib/registry"
 
 export const metadata = {
-  title: "Foodieland",
-  description: "A food delivery app",
-};
+	title: "Foodieland",
+	description: "A food delivery app"
+}
 
 export default function RootLayout({ children }) {
-  return (
+	return (
 		<html lang="en">
 			<body>
-				<Header links={routes} />
-				{children}
-				<GlobalStyles />
-				<Footer />
+				<StyledComponentsRegistry>
+					<Header links={routes} />
+					{children}
+					<GlobalStyles />
+					<Footer />
+				</StyledComponentsRegistry>
 			</body>
 		</html>
-  )
+	)
 }
