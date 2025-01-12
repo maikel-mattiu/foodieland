@@ -12,10 +12,10 @@ export default function RootLayout({ children }) {
   return (
 		<html lang="en">
 			<body>
-				<Header links={routes} />
+				{/* <Header links={routes} /> */}
 				{children}
 				<GlobalStyles />
-				<Footer />
+				{/* <Footer /> */}
 			</body>
 		</html>
   )
